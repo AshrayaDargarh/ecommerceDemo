@@ -11,9 +11,5 @@
       "src": "/(.*)",
       "dest": "index.js" 
     }
-  ],
-  "env": {
-    "MONGO_URL": "mongodb+srv://ashraya:AdKo30pbDRP80CZn@cluster0.5ufasc4.mongodb.net/test?retryWrites=true&w=majority",
-    "PUBLIC_DIR":"dist"
-  }
+  ]
 }
