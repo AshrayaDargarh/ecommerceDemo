@@ -1,17 +1,12 @@
-// import fs from "fs";
-// const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
-// const products = data.products;
 import { Product } from "../models/product.mjs";
 export const createProduct=async (req, res) => {
     const product=new Product(req.body);
     try{
         const doc= await product.save()
         res.status(200).json(doc);
-        // console.log(doc)
     }
     catch(err){
         res.status(400).json(err);
-        console.log(err)
     }
   }
   
@@ -23,14 +18,11 @@ export const getAllProducts=async(req, res) => {
     catch(err)
     {
         res.json(err);
-        console.log(err)
     }
     
 }
   
 export const getProduct=async (req,res)=>{
-    // Converting string into number.
-    // console.log(typeof id)
     const id=req.params.id;
     console.log(id)
     try{
@@ -53,7 +45,6 @@ export const replaceProduct=async(req,res)=>{
     }
     catch(err)
     {
-        console.log(err);
         res.status(400).json(err)
     }
     
@@ -66,7 +57,6 @@ export const updateProduct=async(req,res)=>{
     }
     catch(err)
     {
-        console.log(err);
         res.status(400).json(err)
     }
 }
@@ -79,7 +69,6 @@ export const deleteProduct=async(req,res)=>{
     }
     catch(err)
     {
-        console.log(err)
         res.status(400).json(deleteProduct)
     }
     
