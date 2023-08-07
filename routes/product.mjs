@@ -3,8 +3,6 @@ import { createProduct, getAllProducts,getProduct,replaceProduct,updateProduct,d
 
 export const productRouter=express.Router()
 
-// createProduct is a routing function
-// After removing products from the methods we will not bound to these route. We can use same router for different routes
 productRouter
   .post("/", createProduct)
   .get("/", getAllProducts)
@@ -12,5 +10,3 @@ productRouter
   .put("/:id", replaceProduct)
   .patch("/:id", updateProduct)
   .delete("/:id", deleteProduct)
-
-// export default productRouter;
